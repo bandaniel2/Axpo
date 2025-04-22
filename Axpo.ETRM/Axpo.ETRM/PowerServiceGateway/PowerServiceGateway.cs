@@ -8,7 +8,7 @@ internal class PowerServiceGateway(IPowerService powerService) : IPowerServiceGa
 {
     public async Task<IEnumerable<Hour>> GetHourlyVolumes()
     {
-        var trades = await powerService.GetTradesAsync(DateTime.Now);
+        var trades = await powerService.GetTradesAsync(DateTime.Today.AddDays(1));
 
         return Enumerable.Range(0,24)
             .Select(i => new Hour
