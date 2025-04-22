@@ -4,5 +4,5 @@ using Models;
 
 public interface IPowerServiceGateway
 {
-    Task<List<Hour>> GetHourlyVolumes();
+    Task<IEnumerable<Hour>> GetHourlyVolumes();
 }

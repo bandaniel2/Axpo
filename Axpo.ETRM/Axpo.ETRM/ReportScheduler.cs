@@ -15,7 +15,7 @@ public class ReportScheduler(
         {
             try
             {
-                logger.LogInformation($"Running report at: {DateTime.Now}");
+                logger.LogInformation($"Generating report at: {DateTime.Now}");
                 await reportService.GetReport();
                 logger.LogInformation($"Report generated successfully");
             }

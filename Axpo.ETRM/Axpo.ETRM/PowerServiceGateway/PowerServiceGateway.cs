@@ -6,7 +6,7 @@ using Domain.Interfaces;
 
 internal class PowerServiceGateway(IPowerService powerService) : IPowerServiceGateway
 {
-    public async Task<List<Hour>> GetHourlyVolumes()
+    public async Task<IEnumerable<Hour>> GetHourlyVolumes()
     {
         var trades = await powerService.GetTradesAsync(DateTime.Now);
 
@@ -15,7 +15,6 @@ internal class PowerServiceGateway(IPowerService powerService) : IPowerServiceGa
             {
                 Time = new TimeOnly((i + 23) % 24,0),
                 Volume = trades.Sum(trade => trade.Periods[i].Volume)
-            })
-            .ToList();
+            });
     }
 }

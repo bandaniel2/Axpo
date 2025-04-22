@@ -4,5 +4,5 @@ using Domain.Models;
 
 public interface IFileGateway
 {
-    void SaveToCSV(List<Hour> hours);
+    void SaveToCSV(IEnumerable<Hour> hours);
 }

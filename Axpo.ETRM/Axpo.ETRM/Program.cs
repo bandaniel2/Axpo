@@ -4,7 +4,6 @@ using Microsoft.Extensions.Configuration;
 using Axpo.ETRM.PowerServiceGateway.Modules;
 using Axpo.ETRM.FileGateway.Modules;
 using Axpo.ETRM.ReportService.Modules;
-using Axpo.ETRM.ReportService.Interfaces;
 using Axpo.ETRM;
 
 await Host.CreateDefaultBuilder()

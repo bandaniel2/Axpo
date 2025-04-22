@@ -5,7 +5,7 @@ using Domain.Models;
 
 internal class FileGateway(string FolderPath) : IFileGateway
 {
-    public void SaveToCSV(List<Hour> hours)
+    public void SaveToCSV(IEnumerable<Hour> hours)
     {
         string fileName = $"PowerPosition_{DateTime.Now.ToString("yyyyMMdd_HHmm")}.csv";
 
